@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{post.title}} | Erhan Başa{% endblock %}
+
+{% block keywords %}{{post.keywords}}{% endblock %}
+
+{% block description %}{{post.description}}{% endblock %}
+
+{% block Content %}
+	<div id="Post">
+		<div class="bl12 fc">
+			<h2 class="pt10 fbl">{{post.title}}</h2>
+			<div class="postInfo mt5 no-d">
+				<span>{{post.date}} |</span>
+				{% for cats in category%}
+					<a href="/{{cats.slug}}">{{cats}}</a>
+				{% endfor %}
+			</div>
+			<p class="postDesc p0 pb10">{{post.description}}</p>
+			<div class="postImage">
+			<img src="{{MEDIA_URL}}{{post.image}}" />
+			</div>
+			{{post.text|safe}}
+
+			<ul class="categoryList mt10 pt10 no-l">
+				<h3>Kategoriler : </h3>
+				{% for cat in category %}
+					<li class="mt10">
+						<a href="/{{cat.slug}}">
+							{{cat}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% endblock %}

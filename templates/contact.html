@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block Content %}
+	<div id="ContactForm" class="bl12 fc pd10">
+		<h2 class="mt10 pt10">İletişim</h2>
+		{% if messages %}
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		{% endif %}
+		<form action="/contact/" method="POST">{% csrf_token %}
+			{{ form.as_p }}
+			<button>GÖNDER</button>
+		</form>
+	</div>
+{% endblock %}

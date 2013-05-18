@@ -1,0 +1,5 @@
+.DS_Store
+erhanb.db
+uploads/blog/*
+uploads/editor/*
+static/fonts/*

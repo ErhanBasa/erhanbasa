@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html id="{% block page %}Page{% endblock %}" class="reset-all" lang="tr" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Erhan Başa - Front End Developer{% endblock %}</title>
+	<meta name="description" content="{% block description %}Web arayüz geliştirme üzerine önce kendime sonra insanlara olan notlarım{% endblock %}">
+	<meta name="keywords" content="{% block keywords %}html, css, html5, css3, js, javascript, jquery, front end developer, arayüz geliştirici, erhan başa{% endblock %}">
+	<meta itemprop="name" content="Erhan Başa">	
+	
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}js/libs/google-code-prettify/prettify.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/frokit.css">
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css">
+
+	<script type="text/javascript">
+  		var _gaq = _gaq || [];
+		  		_gaq.push(['_setAccount', 'UA-33428393-1']);
+		  		_gaq.push(['_trackPageview']);
+		
+  		(function() {
+  		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
+</head>
+<body>
+<div id="Container">
+	{% block Header %}
+	<header id="Header" class="fbl fl pb60">
+		<div class="bl12 fc">
+			<div class="fbl fl">
+				<h1 id="Logo" class="fl no-d">
+					<a href="/">
+						<span class="hideEmblem"></span>
+						<span class="logoBg"></span>
+						<span class="tac">ERHANBASA</span>
+					</a>
+				</h1>
+				<ul id="TopMenu" class="no-llsm fr no-d pt60">
+					<li><a href="/blog">BLOG</a></li>
+					<li><a href="/about">HAKKIMDA</a></li>
+					<li><a href="/contact">İLETİŞİM</a></li>
+				</ul>
+			</div><!-- Header Top End -->
+		</div>
+	</header><!-- Header End -->
+	{% endblock %}
+	<div id="Content" class="fbl fl">
+	{% block Content %}
+	{% endblock %}
+	</div><!-- Content End -->
+	<div class="stickyfooter">
+	</div>
+</div>
+	{% block Footer %}
+	<footer id="Footer" class="fbl fl">
+		<div class="bl12 fc">
+		<ul class="contactLoop no-ll no-d">
+			<li>
+				<a href="mailto:erh4n@live.com">
+					<strong>E-MAIL</strong>
+					ile ulaş
+				</a>
+				<a class="iconCnt" href="mailto:erh4n@live.com">
+					<i class="iconeb mail"></i>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.facebook.com/ErhanBasa">
+					<strong>FACEBOOK</strong>
+					ile ulaş
+				</a>
+				<a class="iconCnt" href="http://www.facebook.com/ErhanBasa">
+					<i class="iconeb facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/ErhanBasa">
+					<strong>TWITTER</strong>
+					ile takip et
+				</a>
+				<a class="iconCnt" href="https://twitter.com/ErhanBasa">
+					<i class="iconeb twitter"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/erhanbasa">
+					<strong>GITHUB</strong>
+					ile takip et
+				</a>
+				<a class="iconCnt" href="https://github.com/erhanbasa">
+					<i class="iconeb github"></i>
+				</a>
+			</li>
+		</ul>
+		</div>
+	</footer>
+	{% endblock %}
+</body>
+<script src="{{ STATIC_URL }}js/libs/google-code-prettify/run_prettify.js"></script>
+<script src="{{ STATIC_URL }}js/libs/google-code-prettify/prettify.js"></script>
+<script src="{{ STATIC_URL }}js/custom.js"></script>
+</html>

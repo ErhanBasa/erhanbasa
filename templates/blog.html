@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+Blog | Erhan Başa
+{% endblock %}
+
+{% block Content %}
+<div>
+	<h2 class="bl12 fc mt10 mb10">BLOG</h2>
+</div>
+<ul class="blogLoop no-l no-d">
+{% for p in posts %}
+<li class="fbl fl">
+	<h3 class="bl12 fc">
+		<a class="fbl pt10 pb10" href="{{p.slug}}">{{p}} ({{p.date}})</a>
+	</h3>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

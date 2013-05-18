@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block page %}Index{% endblock %}
+
+{% block Content %}
+		<div id="Blog" class="fbl fl pb60">
+			<div class="bl12 fc">
+				<p class="sctText tac pt10 pb10">BLOG</p>
+				<ul class="postLoop no-ll no-d">
+					{% for p in posts|slice:":2" %}
+						<li>
+							<p class="date">{{p.date}}</p>
+							<h2 class="mt5"><a href="/blog/{{p.slug}}">{{p.title}}</a></h2>
+							<div class="postImg mt10">
+								<a href="/blog/{{p.slug}}">
+									<img src="{{MEDIA_URL}}{{p.image}}" />
+								</a>
+							</div>
+							<p class="postSummary mt10">{{p.description}}</p>
+						</li>
+					{% endfor %}
+				</ul>
+				<a class="no-d bottomLink tac fbl mt10 fl" href="/about/">[ BLOG ]</a>
+			</div>
+		</div><!-- Blog Loop End -->
+		<div id="About" class="fbl fl pb60">
+			<div class="bl12 fc">
+				<p class="sctText tac pt10 pb10">HAKKIMDA</p>
+				<ul class="companyLoop no-ll no-d">
+					<li>
+						<div class="companyImg">
+							<a href="/about">
+								<img src="{{MEDIA_URL}}about/devinternet.png" />
+							</a>
+						</div>
+						<h3 class="mt10 tac">DEV Internet</h3>
+						<p class="mt10 tac">Front End Developer</p>
+					</li>
+					<li>
+						<div class="companyImg">
+							<a href="/about">
+								<img src="{{MEDIA_URL}}about/reident.png" />
+							</a>
+						</div>
+						<h3 class="mt10 tac">Reident</h3>
+						<p class="mt10 tac">Front End Developer</p>
+					</li>
+					<li>
+						<div class="companyImg">
+							<a href="/about">
+								<img src="{{MEDIA_URL}}about/tacirnet.png" />
+							</a>
+						</div>
+						<h3 class="mt10 tac">Tacirnet</h3>
+						<p class="mt10 tac">Front End Developer</p>
+					</li>
+				</ul>
+				<a class="no-d bottomLink tac fbl mt10 fl" href="/about/">[ HAKKIMDA ]</a>
+			</div>
+		</div><!-- About Loop End -->
+		{% endblock %}

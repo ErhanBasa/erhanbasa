@@ -1,0 +1,136 @@
+/*	
+	Style CSS,
+	Author : Erhan Basa (erhanbasa.com)
+	Create Day : 07 May 2013
+	Last Update : 07 May 2013
+
+*/
+
+/*    Fonts     */
+@font-face {font-family: 'font100';src: url('../fonts/font100.eot');src: url('../fonts/font100.eot?#iefix') format('embedded-opentype'),url('../fonts/font100.svg#museo_sans_100regular') format('svg'),url('../fonts/font100.woff') format('woff'),url('../fonts/font100.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'font300';src: url('../fonts/font300.eot');src: url('../fonts/font300.eot?#iefix') format('embedded-opentype'),url('../fonts/font300.svg#museo_sans_300regular') format('svg'),url('../fonts/font300.woff') format('woff'),url('../fonts/font300.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'font500';src: url('../fonts/font500.eot');src: url('../fonts/font500.eot?#iefix') format('embedded-opentype'),url('../fonts/font500.svg#museo_sans_500regular') format('svg'),url('../fonts/font500.woff') format('woff'),url('../fonts/font500.ttf') format('truetype');font-weight: normal;font-style: normal;}
+/*@font-face {font-family: 'font500';font-weight:bold;src: url('../fonts/font700.eot');src: url('../fonts/font700.eot?#iefix') format('embedded-opentype'),url('../fonts/font700.svg#museo_sans_700regular') format('svg'),url('../fonts/font700.woff') format('woff'),url('../fonts/font700.ttf') format('truetype');font-style: normal;}*/
+
+/*	  Custom Variables    */
+html, body {height: 100%; max-width: 100%; overflow-x: hidden;}
+body 	{background: #eeeeee; color:#666666; font-family: 'font500',sans-serif; font-size: 14px;}
+a 		{color: #666666;}
+img 	{max-width: 100%;}
+#Content 	{background: #eeeeee}
+.pt60 	{padding-top: 60px;}
+.pb60 	{padding-bottom: 60px;}
+
+.iconeb 		{width: 32px; height: 32px; background: url(../imgs/sprite.png) no-repeat; display: block; display: inline-block;}
+.iconeb.mail 	{background-position: -1px -1px; width: 36px; height: 35px;}
+.iconeb.facebook 	{background-position: -1px -38px;}
+.iconeb.twitter 	{background-position: -40px -2px;}
+.iconeb.github 		{background-position: -35px -39px;}
+
+/*	  Style is Coming	*/
+#Container {min-height: 100%; height: auto !important; height: 100%; margin-bottom: 100px;}
+.stickyfooter {height: 100px;}
+
+#Header 	{background: #e6e6e6;}
+#Logo a 	{width: 140px; height: 140px; background: #00d0e9; display: block; position: relative;}
+#Logo .logoBg 	{background: url(../imgs/sprite.png) -1px -78px; width: 100px; height: 76px; display: block; float:left; margin: 15px 20px;}
+#Logo span 	{display: block; font-family: 'font100',sans-serif; color: #fff; font-size: 20px;}
+#Logo .hideEmblem {background: url(../imgs/sprite.png) -74px -1px; width: 63px; height: 49px; position: absolute; left: 40px; top: -55px; transition: top .5s; -webkit-transition: top .5s;}
+#Logo a:hover .hideEmblem 	{top:25px;}
+
+
+#TopMenu a 	{ border: 0; border-bottom: 2px solid transparent;}
+#TopMenu a:hover 	{ border-bottom: 2px solid #00d0e9;}
+
+.miniText 	{font-size: 30px;}
+.miniText strong 	{color: #333333;}
+.sctText 	{font-size: 36px; color: #e6e6e6;}
+
+#Content 	{padding-bottom: 20px;}
+
+h2	{color: #333; margin-top: 15px; font-size: 30px;}
+h3  {color: #333; font-size: 20px;}
+#About p 	{margin-top: 15px; line-height: 22px;}
+.strfont 	{color: #000;}
+
+#Index #About 	{background: #f5f5f5;}
+#Index #Content {padding-bottom: 0;}
+
+#Footer	{height: 100px; background: #00d0e9;}
+
+
+.contactLoop li 		{margin-left: 115px; padding-top: 10px;}
+.contactLoop li:first-child 		{margin-left: 0;}
+.contactLoop li a 		{color: #fff; font-size: 16px; float: left; margin-top: 20px; padding-left: 15px;}
+.contactLoop li:first-child a:first-child 		{padding-left: 0;}
+.contactLoop li strong  	{display: block;}
+
+.postLoop li:first-child 	{float: left;}
+.postLoop li 				{width: 47%; float: right;}
+.postLoop .postImg 			{width: 96%; padding: 2%; background: #fff;}
+.postLoop .postImg a		{height: auto; overflow: hidden; display: block;}
+.postLoop .postImg img		{max-width: 100%;}
+
+.companyLoop li 	{ width: 32%; margin-left: 2%;}
+.companyLoop li:first-child 	{ margin-left: 0;}
+.companyLoop .companyImg 	{width: 100%; height: 160px;}
+
+#Post h2 	{ margin-top: 20px;}
+#Post p 	{padding-top: 15px; font-size: 14px; line-height: 20px;}
+#Post p strong 	{color: #000;}
+
+#Post .postDesc 	{font-size: 16px; color: #333; margin-bottom: 20px;}
+
+.blogLoop li:first-child 	{border-top: 1px solid #ccc;}
+.blogLoop li 	{border-bottom: 1px solid #ccc;}
+.blogLoop li:nth-child(odd) 	{background: #fff;}
+.blogLoop li:nth-child(even) 	{background: #f5f5f5;}
+
+
+.bottomLink 	{color: #000; font-size: 12px; margin-top: 20px;}
+
+.postImage 		{width: 96%; padding: 2%; background: #fff; float: left; margin-bottom: 20px;}
+
+.aboutImg 	 	{padding: 4px; border: 1px solid #ccc; float: left; background: #fff; border-radius: 3px;}
+
+#Post pre.prettyprint 	{padding: 15px; margin: 5px 0;}
+#About .bl8 p 	{line-height: 18px; margin-top: 0;}
+
+#ContactForm label 	{display: none;}
+#ContactForm input 	{width: 41%; float: left; margin-right: 3%; height: 40px; text-indent: 10px; font-size: 20px; margin-top: 10px;}
+#ContactForm textarea 	{width: 83.5%; margin-top: 20px; font-size: 20px; padding: 10px; }
+#ContactForm button 	{width: 86%; margin-top: 20px; height: 40px; background: #00d0e9; color: #fff; border: 0; cursor: pointer; border-radius: 3px; opacity: .7;}
+#ContactForm button:hover 	{opacity: 1;}
+#ContactForm button:active 	{box-shadow: inset 0 0 5px rgba(0,0,0,.5);}
+
+
+
+
+/*		Responsive 		*/
+@media (min-width: 768px) and (max-width: 979px) {
+	.bl12 	{width: 740px; padding: 0 7px;}
+	.contactLoop li 	{margin-left: 65px;}
+	#About .bl8 	{margin-top: 10px;}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.bl12 	{width: 460px; padding: 0 3px;}
+	.contactLoop li  	{width: 25%; margin: 0}
+	.contactLoop li a 	{display: none;}
+	.contactLoop li a.iconCnt 	{display: block;}
+	.postLoop li 	{width: 100%;}
+	.companyLoop li 	{width: 100%; margin: 0; text-align: center; margin-bottom: 10px;}
+	#About .bl8 	{margin-top: 10px;}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.bl12 	{width: 300px; padding: 0 5px;}
+	#Logo {margin: 0 auto; float: none; width: 140px;}
+	#TopMenu  	{width: 100%; text-align: center;}
+	#TopMenu li 	{float: none; display: inline; display: inline-block;}
+	#TopMenu a 	{display:inline; display: inline-block;}
+
+}
+
