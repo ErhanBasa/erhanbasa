@@ -4,7 +4,7 @@ import os
 _parent = lambda x: os.path.normpath(os.path.join(x,'..'))
 PROJECT_DIR = _parent(os.path.dirname(__file__))
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

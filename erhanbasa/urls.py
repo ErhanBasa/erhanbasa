@@ -5,6 +5,7 @@ from blog.models import Category, Post
 from django.contrib import admin
 from erhanbasa import settings
 admin.autodiscover()
+handler404 = 'blog.views.articles'
 
 urlpatterns = patterns('',
     # Examples:

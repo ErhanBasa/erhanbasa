@@ -43,7 +43,7 @@ def categories(request, template = 'category.html', slug=None):
 def article(request, template = "detail.html", slug = None):
 	categories = Category.objects.all().order_by('name')
 	posts = Post.objects.all().order_by('-date')
-	post = Post.objects.get(slug=slug)
+	post = get_object_or_404(Post, slug=slug)
 
 	ctx = {
 		'posts' : posts,
