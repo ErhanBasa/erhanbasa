@@ -2,8 +2,6 @@
 	Style CSS,
 	Author : Erhan Basa (erhanbasa.com)
 	Create Day : 07 May 2013
-	Last Update : 07 May 2013
-
 */
 
 /*    Fonts     */
@@ -15,6 +13,7 @@
 /*	  Custom Variables    */
 html, body {height: 100%; max-width: 100%; overflow-x: hidden;}
 body 	{background: #eeeeee; color:#666666; font-family: 'font500',sans-serif; font-size: 14px;}
+img 	{border: 0;}
 a 		{color: #666666;}
 img 	{max-width: 100%;}
 #Content 	{background: #eeeeee}
@@ -97,9 +96,11 @@ h3  {color: #333; font-size: 20px;}
 #About .bl8 p 	{line-height: 18px; margin-top: 0;}
 
 #ContactForm label 	{display: none;}
-#ContactForm input 	{width: 41%; float: left; margin-right: 3%; height: 40px; text-indent: 10px; font-size: 20px; margin-top: 10px;}
-#ContactForm textarea 	{width: 83.5%; margin-top: 20px; font-size: 20px; padding: 10px; }
-#ContactForm button 	{width: 86%; margin-top: 20px; height: 40px; background: #00d0e9; color: #fff; border: 0; cursor: pointer; border-radius: 3px; opacity: .7;}
+#ContactForm #id_name,
+#ContactForm #id_mail 	{width: 48%; height: 40px; text-indent: 20px; font-size: 20px; float: left; margin-right: 3.1%; margin-bottom: 20px; margin-top: 20px;}
+#ContactForm #id_mail 	{margin-right: 0;}
+#ContactForm textarea 	{width: 96%; float: left; padding: 2%; font-size: 20px; }
+#ContactForm button 	{width: 100%; margin-top: 20px; height: 40px; background: #00d0e9; color: #fff; border: 0; cursor: pointer; border-radius: 3px; opacity: .7;}
 #ContactForm button:hover 	{opacity: 1;}
 #ContactForm button:active 	{box-shadow: inset 0 0 5px rgba(0,0,0,.5);}
 
@@ -129,6 +130,7 @@ h3  {color: #333; font-size: 20px;}
 	.companyLoop li 	{width: 100%; margin: 0; text-align: center; margin-bottom: 10px;}
 	#About .bl8 	{margin-top: 10px;}
 	.blogP.postLoop li 	{margin:0; width: 100%; margin-top: 25px;}
+	#Page #ContactForm input 	{width: 100%; margin: 10px 0;}
 }
  
 /* Landscape phones and down */

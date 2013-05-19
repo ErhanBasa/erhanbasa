@@ -12,7 +12,7 @@
 			<h2 class="pt10 fbl">{{post.title}}</h2>
 			<div class="postInfo mt5 no-d">
 				<span>{{post.date}} |</span>
-				{% for cats in category%}
+				{% for cats in post.categories.all %}
 					<a href="/{{cats.slug}}">{{cats}}</a>
 				{% endfor %}
 			</div>
@@ -24,10 +24,10 @@
 
 			<ul class="categoryList mt10 pt10 no-l no-d">
 				<h3>Kategoriler : </h3>
-				{% for cat in category %}
+				{% for cats in post.categories.all %}
 					<li class="mt10">
-						<a href="/{{cat.slug}}">
-							{{cat}}
+						<a href="/{{cats.slug}}">
+							{{cats}}
 						</a>
 					</li>
 				{% endfor %}
