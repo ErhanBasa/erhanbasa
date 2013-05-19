@@ -103,6 +103,12 @@ h3  {color: #333; font-size: 20px;}
 #ContactForm button:hover 	{opacity: 1;}
 #ContactForm button:active 	{box-shadow: inset 0 0 5px rgba(0,0,0,.5);}
 
+.blogTop			{border-bottom: 1px solid #ccc; padding-bottom: 20px; overflow: hidden;}
+.blogTop ul li a 	{padding: 0 10px; border-left: 1px solid #ccc;}
+.blogTop ul li:first-child a 	{padding-left: 0; border: 0;}
+
+.blogP.postLoop li 	{width: 30%; float: left; margin-top: 10px; margin-right: 5%; min-height: 240px;}
+.blogP.postLoop li.lasttab 	{margin-right: 0;}
 
 
 
@@ -122,6 +128,7 @@ h3  {color: #333; font-size: 20px;}
 	.postLoop li 	{width: 100%;}
 	.companyLoop li 	{width: 100%; margin: 0; text-align: center; margin-bottom: 10px;}
 	#About .bl8 	{margin-top: 10px;}
+	.blogP.postLoop li 	{margin:0; width: 100%; margin-top: 25px;}
 }
  
 /* Landscape phones and down */

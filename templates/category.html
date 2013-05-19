@@ -8,13 +8,21 @@
 <div>
 	<h2 class="bl12 fc mt10 mb10 no-d"><a href="/blog/">Blog</a> / {{category.name}}</h2>
 </div>
-<ul class="blogLoop no-l no-d">
-{% for p in posts %}
-<li class="fbl fl">
-	<h3 class="bl12 fc">
-		<a class="fbl pt10 pb10" href="/blog/{{p.slug}}">{{p}} ({{p.date}})</a>
-	</h3>
-</li>
-{% endfor %}
-</ul>
+<div class="fbl fl">
+	<div class="fc bl12">
+		<ul class="blogP postLoop no-ll no-d">
+			{% for p in posts %}
+				<li{% if forloop.counter|divisibleby:"3" %} class="lasttab"{% endif %}>
+					<p class="date">{{p.date}}</p>
+					<h3 class="mt5"><a href="/blog/{{p.slug}}">{{p.title}}</a></h3>
+					<div class="postImg mt10">
+						<a href="/blog/{{p.slug}}">
+							<img src="{{MEDIA_URL}}{{p.image}}" />
+						</a>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
 {% endblock %}
